@@ -47,7 +47,11 @@ document.querySelector('#mute').addEventListener("click", function() {
 		document.querySelector("#mute").innerHTML = "Unmute"
 	}
 	});
-	
+document.querySelector("#slider").addEventListener("click", function() {
+	video.volume = (document.querySelector("#slider").value)/100;
+	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%";
+});
+
 document.getElementById("vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool")
 	});
